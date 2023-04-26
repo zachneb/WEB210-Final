@@ -1,0 +1,230 @@
+/*** General ***/
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  scroll-behavior: smooth !important;
+}
+section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  display: grid;
+  justify-content: center;
+}
+.wrapper {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+.intro {
+  background-color: #58514F;
+}
+.about {
+  background-color: #877E7C;
+}
+.gallery {
+  background-color: #6E6361;
+}
+.contact {
+  background-color: #7B716F;
+}
+
+header {
+  position: fixed;
+  display: inline-block;
+}
+/*** Navigation ***/
+nav {
+  position: fixed;
+  width: 100%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav li {
+  display: inline-block;
+}
+nav ul {
+  background-color: #3333334b;
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+li a {
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  padding: 20px;
+}
+li a:hover {
+  color: yellow;
+  transition: 0.4s;
+}
+.logo a{
+  font-family: 'Staatliches', cursive;
+  font-weight: bolder;
+  font-size: larger;
+}
+/*** Scroll Bar ***/
+::-webkit-scrollbar {
+  width: 0.9rem;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(73, 61, 61);
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 100vh;
+  border: 2px solid rgb(73, 61, 61);
+}
+@supports (scrollbar-color: rgb(73, 61, 61) black)
+{
+  * {
+    scrollbar-color: rgb(73, 61, 61) black;
+  }
+}
+/*** Intro ***/
+.intro-container {
+  text-align: center;
+}
+.intro-container h1 {
+  font-size: 90px;
+  font-family: 'Staatliches', cursive;
+}
+.intro-container h2 {
+  font-size: 70px;
+  font-family: 'Staatliches', cursive;
+}
+.intro {
+  justify-content: center;
+  align-items: center;
+}
+/*** About Section ***/
+.about-container {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 0 10%;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+@media screen and (max-width: 882px) {
+  .about-container {
+    grid-template-columns: auto;
+  }
+}
+.about article {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.about h2 {
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+.about p {
+  font-size: 20px;
+  margin: 0 10%;
+  text-align: center;
+}
+.about li {
+  font-size: 18px;
+}
+/*** Project Gallery ***/
+.gallery h2 {
+  font-size: 40px;
+  padding-top: 40px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+.gallery h3 {
+  text-align: center;
+  font-size: 30px;
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 2.5rem;
+  padding-bottom: 90px;
+}
+.gallery-container img {
+  height: 210px;
+  width: 350px;
+  border: 2px solid black;
+}
+.gallery img:hover {
+  border: 2px solid yellow;
+  transition: 0.8s;
+}
+@media screen and (max-width: 1180px) {
+  .gallery-container {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 840px) {
+  .gallery-container {
+    grid-template-columns: auto;
+  }
+}
+/*** Contact Section ***/
+.contact h2 {
+  font-size: 40px;
+  padding-top: 40px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+.contact label {
+  font-weight: bolder;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+form {
+  padding: 15px;
+}
+.contact-containder {
+  padding-bottom: 40px;
+}
+footer {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.social {
+  padding: 0 10px;
+  font-family: monospace;
+  font-size: 18px;
+  text-decoration: none;
+  color: #270903;
+}
+.social:hover {
+  color: yellow;
+  transition: 0.8s;
+}
